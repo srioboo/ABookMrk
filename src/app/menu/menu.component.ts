@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NAVIGATION } from '../mock-navegacion';
 
 @Component({
   selector: 'app-menu',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./menu.component.scss']
 })
 export class MenuComponent implements OnInit {
+
+  nav = NAVIGATION;
 
   constructor() { }
 
