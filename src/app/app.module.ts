@@ -7,12 +7,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
 import { HeaderComponent } from './header/header.component';
+import { BookmarksComponent } from './bookmarks/bookmarks.component';
+import { EntornosComponent } from './entornos/entornos.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent,
-    HeaderComponent
+    HeaderComponent,
+    BookmarksComponent,
+    EntornosComponent
   ],
   imports: [
     BrowserModule,

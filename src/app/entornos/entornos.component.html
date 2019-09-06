@@ -1,0 +1,11 @@
+<p>entornos works!</p>
+<div *ngFor="let ent of entor" >
+    <div>{{ent.entorno}}</div>
+    <div *ngFor="let bk of ent.direcciones">
+        
+        <a href="{{bk.url}}">{{bk.name}}</a>
+    </div>
+</div>
+
+
+   
