@@ -1,7 +1,12 @@
 import { Navegacion } from './navegacion';
 
 export const NAVIGATION: Navegacion[] = [
-    {id: 1, nombre: 'Google', url: 'www.google.com', descripcion: ''},
-    {id: 2, nombre: 'Face', url: 'www.facebook.com', descripcion: ''},
-    {id: 3, nombre: 'Linkedin', url: 'www.linkedin.com', descripcion: ''}
+    {
+        id: 1, nombre: 'IBM-WC V9',
+        url: 'https://www.ibm.com/support/knowledgecenter/en/SSZLC2_9.0.0/landing/wc_welcome.htm', descripcion: ''
+    },
+    {
+        id: 2, nombre: 'IBM-WC V8',
+        url: 'https://www.ibm.com/support/knowledgecenter/en/SSZLC2_8.0.0/landing/wc_welcome.htm', descripcion: ''
+    }
 ];

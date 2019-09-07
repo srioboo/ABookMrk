@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { NAVIGATION } from '../mock-navegacion';
+import { ENTORNOS } from '../mock-entorno';
+import { Entorno } from '../entorno';
+import { DatosService } from '../datos.service';
 
 @Component({
   selector: 'app-menu',
@@ -8,11 +11,26 @@ import { NAVIGATION } from '../mock-navegacion';
 })
 export class MenuComponent implements OnInit {
 
+  /** asingamos constantes */
   nav = NAVIGATION;
+  ent = ENTORNOS;
 
-  constructor() { }
+  /** creamos variable de tipo entorno */
+  entornoSelected: Entorno;
+
+  constructor(private datosS: DatosService) { }
 
   ngOnInit() {
+    // al iniciar entornoSelected tendra un valor por defecto
+    this.datosS.saveEntorno(ENTORNOS[0]);
+    this.entornoSelected = this.datosS.getEntorno();
   }
 
+  /** Permite detecar el filtro al ser pulsado */
+  onSelectEntorno(entorno: Entorno): void {
+    this.datosS.saveEntorno(entorno);
+    this.entornoSelected = this.datosS.getEntorno();
+    console.log('seleccionado: ' + entorno.entorno);
+    this.datosS.emitirEntorno(this.entornoSelected);
+  }
 }

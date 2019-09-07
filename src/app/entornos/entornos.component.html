@@ -1,8 +1,13 @@
 <div class="entornos container" *ngFor="let ent of entor" >
-    <div class="title">{{ent.entorno}}</div>
-    <div class="row" *ngFor="let bk of ent.direcciones">
-        <div class="col-4">{{bk.name}}</div>
-        <div class="col-8"><a href="{{bk.url}}">{{bk.url}}</a></div>
+    <div *ngIf="entorno === ent">
+        <div class="title"
+        data-toggle="collapse" [attr.data-target]="'#' + ent.entorno" 
+        aria-expanded="false" 
+        aria-controls="collapseExample">{{ent.entorno | uppercase}}</div>
+        <div [id]="ent.entorno" class="row collapse" *ngFor="let bk of ent.direcciones">
+            <div class="col-4">{{bk.name}}</div>
+            <div class="col-8"><a href="{{bk.url}}">{{bk.url}}</a></div>
+        </div>
     </div>
 </div>
 
