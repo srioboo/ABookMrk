@@ -1,0 +1,15 @@
+$title-background: grey;
+$title-color: white;
+
+.bookmarks {
+    .row {
+        line-height: 40px;
+        padding: 0px 15px;
+    }
+    .title {
+        background-color: $title-background;
+        color: $title-color;
+        @extend .row
+    }
+    
+}
