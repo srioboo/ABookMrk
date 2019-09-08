@@ -14,7 +14,7 @@
       <li class="nav-item" *ngFor="let entorno of ent">
         <div class="nav-link" 
             [class.selected]="entornoSelected === entorno"
-            (click)="onSelectEntorno(entorno)">{{entorno.entorno}}</div>
+            (click)="onSelectEntorno(entorno)">{{entorno.nombre}}</div>
       </li>
       <li class="nav-item" *ngFor="let enlace of nav">
         <a class="nav-link" href="{{enlace.url}}">{{enlace.nombre}}</a>

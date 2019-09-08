@@ -1,6 +1,7 @@
 import { Bookmark } from './bookmark';
 
 export class Entorno {
-    entorno: string;
+    id: number;
+    nombre: string;
     direcciones: Array<Bookmark>;
 }

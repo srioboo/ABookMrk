@@ -3,7 +3,8 @@ import { Entorno } from './entorno';
 
 export const ENTORNOS: Entorno[] = [
     {
-      entorno: 'Tiendas',
+      id: 0,
+      nombre: 'Tiendas',
       direcciones: [
         {
           name: 'Amazon',
@@ -16,7 +17,8 @@ export const ENTORNOS: Entorno[] = [
       ]
     },
     {
-      entorno: 'Redes sociales',
+      id: 1,
+      nombre: 'Redes sociales',
       direcciones: [
         {
           name: 'Facebook',
@@ -41,7 +43,8 @@ export const ENTORNOS: Entorno[] = [
       ]
     },
     {
-      entorno: 'Video',
+      id: 2,
+      nombre: 'Video',
       direcciones: [
         {
           name: 'Netflix',
@@ -62,7 +65,8 @@ export const ENTORNOS: Entorno[] = [
       ]
     },
     {
-      entorno: 'Lectura',
+      id: 3,
+      nombre: 'Lectura',
       direcciones: [
         {
           name: 'Feedly',
@@ -83,7 +87,8 @@ export const ENTORNOS: Entorno[] = [
       ]
     },
     {
-      entorno: 'Utilidades',
+      id: 4,
+      nombre: 'Utilidades',
       direcciones: [
         {
           name: 'Calendar',

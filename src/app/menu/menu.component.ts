@@ -30,7 +30,7 @@ export class MenuComponent implements OnInit {
   onSelectEntorno(entorno: Entorno): void {
     this.datosS.saveEntorno(entorno);
     this.entornoSelected = this.datosS.getEntorno();
-    console.log('seleccionado: ' + entorno.entorno);
+    console.log('seleccionado: ' + entorno.nombre);
     this.datosS.emitirEntorno(this.entornoSelected);
   }
 }
