@@ -21,16 +21,22 @@ export class MenuComponent implements OnInit {
   constructor(private datosS: DatosService) { }
 
   ngOnInit() {
-    // al iniciar entornoSelected tendra un valor por defecto
-    this.datosS.saveEntorno(ENTORNOS[0]);
+    // mostramos el seleccionado, al inicio no hay ninguno
     this.entornoSelected = this.datosS.getEntorno();
   }
 
   /** Permite detecar el filtro al ser pulsado */
   onSelectEntorno(entorno: Entorno): void {
-    this.datosS.saveEntorno(entorno);
+
+    if (entorno === null) {
+      // console.log('mostrar todos');
+      this.datosS.saveEntorno(null);
+    } else {
+      // console.log('seleccionado: ' + entorno.nombre);
+      this.datosS.saveEntorno(entorno);
+    }
+
     this.entornoSelected = this.datosS.getEntorno();
-    console.log('seleccionado: ' + entorno.nombre);
     this.datosS.emitirEntorno(this.entornoSelected);
   }
 }

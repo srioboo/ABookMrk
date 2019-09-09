@@ -9,7 +9,16 @@ $title-color: white;
     .title {
         background-color: $title-background;
         color: $title-color;
-        @extend .row
-    }
-    
+        @extend .row;
+
+        &:before {
+            content: "-";
+            margin-right: 5px;
+        }
+
+        &.collapsed:before {
+            content: "+";
+            margin-right: 5px;
+        }
+    }  
 }
