@@ -5,6 +5,8 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build-pro": "ng build --prod && gzipper --verbose ./dist",
+    "build-bro": "ng build --prod && gzipper --brotli --verbose ./dist",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
