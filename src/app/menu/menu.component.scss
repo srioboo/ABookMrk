@@ -1,3 +1,19 @@
 .selected {
     background-color: #CFD8DC;;
 }
+
+.navbar-collapse {
+    &.collapse, &.collapsing {
+        position: fixed;
+        float: left;
+        display: block;
+        background-color: white;
+        border: 1px solid #a8a8a87a;
+        min-width: 20vw;
+        min-height: 100vh;
+        padding: 10px;
+        margin-top: 10px;
+    }
+}
+
+
