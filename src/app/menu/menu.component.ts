@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { NAVIGATION } from '../mock-navegacion';
-import { ENTORNOS } from '../mock-entorno';
-import { Entorno } from '../entorno';
+import { GRUPOS } from '../mock-entorno';
+import { Grupo } from '../grupo';
 import { DatosService } from '../datos.service';
 
 @Component({
@@ -12,31 +11,30 @@ import { DatosService } from '../datos.service';
 export class MenuComponent implements OnInit {
 
   /** asingamos constantes */
-  nav = NAVIGATION;
-  ent = ENTORNOS;
+  ent = GRUPOS;
 
-  /** creamos variable de tipo entorno */
-  entornoSelected: Entorno;
+  /** creamos variable de tipo grupo */
+  grupoSelected: Grupo;
 
   constructor(private datosS: DatosService) { }
 
   ngOnInit() {
     // mostramos el seleccionado, al inicio no hay ninguno
-    this.entornoSelected = this.datosS.getEntorno();
+    this.grupoSelected = this.datosS.getGrupo();
   }
 
   /** Permite detecar el filtro al ser pulsado */
-  onSelectEntorno(entorno: Entorno): void {
+  onSelectGrupo(grupo: Grupo): void {
 
-    if (entorno === null) {
+    if (grupo === null) {
       // console.log('mostrar todos');
-      this.datosS.saveEntorno(null);
+      this.datosS.saveGrupo(null);
     } else {
       // console.log('seleccionado: ' + entorno.nombre);
-      this.datosS.saveEntorno(entorno);
+      this.datosS.saveGrupo(grupo);
     }
 
-    this.entornoSelected = this.datosS.getEntorno();
-    this.datosS.emitirEntorno(this.entornoSelected);
+    this.grupoSelected = this.datosS.getGrupo();
+    this.datosS.emitirGrupo(this.grupoSelected);
   }
 }

@@ -1,6 +1,6 @@
 import { Bookmark } from './bookmark';
 
-export class Entorno {
+export class Grupo {
     id: number;
     nombre: string;
     direcciones: Array<Bookmark>;

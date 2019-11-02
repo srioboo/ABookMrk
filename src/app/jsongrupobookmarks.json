@@ -100,5 +100,20 @@
           "url" :"https://keep.google.com/u/0/?pli=1#home"
         }
       ]
+    },
+    {
+      "id": 1, 
+      "nombre": "IBM-WC Documentación",
+      "direcciones": [
+        {
+          "name": "IBM-WC V9",
+          "url": "https://www.ibm.com/support/knowledgecenter/en/SSZLC2_9.0.0/landing/wc_welcome.htm"
+        },
+        {
+            "name": "IBM-WC V8",
+            "url": "https://www.ibm.com/support/knowledgecenter/en/SSZLC2_8.0.0/landing/wc_welcome.htm"
+        }
+      ]
+      
     }
 ]

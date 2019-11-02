@@ -18,12 +18,12 @@
   <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
     <li class="nav-item">
       <div class="nav-link" 
-        [class.selected]="entornoSelected === null"
-        (click)="onSelectEntorno(null)">Ver todos</div></li>
-    <li class="nav-item" *ngFor="let entorno of ent">
+        [class.selected]="grupoSelected === null"
+        (click)="onSelectGrupo(null)">Ver todos</div></li>
+    <li class="nav-item" *ngFor="let grupo of ent">
       <div class="nav-link" 
-          [class.selected]="entornoSelected === entorno"
-          (click)="onSelectEntorno(entorno)">{{entorno.nombre}}</div>
+          [class.selected]="grupoSelected === grupo"
+          (click)="onSelectGrupo(grupo)">{{grupo.nombre}}</div>
     </li>
     <li class="nav-item" *ngFor="let enlace of nav">
       <a class="nav-link" href="{{enlace.url}}">{{enlace.nombre}}</a>

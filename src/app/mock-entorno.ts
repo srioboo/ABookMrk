@@ -1,5 +1,5 @@
-import { Entorno } from './entorno';
-import jsonentorno from './jsonentorno.json';
+import { Grupo } from './grupo';
+import jsongrupobookmarks from './jsongrupobookmarks.json';
 
 
-export const ENTORNOS: Entorno[] = jsonentorno;
+export const GRUPOS: Grupo[] = jsongrupobookmarks;

@@ -1,24 +1,24 @@
 import { Injectable, EventEmitter } from '@angular/core';
-import { Entorno } from './entorno';
+import { Grupo } from './grupo';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DatosService {
-  entorno: Entorno;
-  miEmiter = new EventEmitter<Entorno>();
+  grupo: Grupo;
+  miEmiter = new EventEmitter<Grupo>();
 
   constructor() { }
 
-  getEntorno() {
-    return this.entorno;
+  getGrupo() {
+    return this.grupo;
   }
 
-  saveEntorno(entorno) {
-    this.entorno = entorno;
+  saveGrupo(grupo: Grupo) {
+    this.grupo = grupo;
   }
 
-  emitirEntorno(entorno) {
-    this.miEmiter.emit(entorno);
+  emitirGrupo(grupo: Grupo) {
+    this.miEmiter.emit(grupo);
   }
 }
