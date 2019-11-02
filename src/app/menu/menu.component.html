@@ -25,9 +25,6 @@
           [class.selected]="grupoSelected === grupo"
           (click)="onSelectGrupo(grupo)">{{grupo.nombre}}</div>
     </li>
-    <li class="nav-item" *ngFor="let enlace of nav">
-      <a class="nav-link" href="{{enlace.url}}">{{enlace.nombre}}</a>
-    </li>
   </ul>
   
 </div>
