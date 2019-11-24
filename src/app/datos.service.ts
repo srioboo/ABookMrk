@@ -1,24 +1,43 @@
-import { Injectable, EventEmitter } from '@angular/core';
-import { Grupo } from './grupo';
+import { Injectable, EventEmitter, Input } from '@angular/core';
+import { Bookmarks } from './bookmarks';
+import { BOOKMARKS } from './mock-bookmarks';
+import { Observable, of } from 'rxjs';
+import { MessageService } from './message.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DatosService {
-  grupo: Grupo;
-  miEmiter = new EventEmitter<Grupo>();
 
-  constructor() { }
+  constructor(private messageService: MessageService) {}
 
-  getGrupo() {
-    return this.grupo;
+  bookmarks: Bookmarks[];
+
+  /**
+   * Obtecion de los bootmarks desde el observable para poder usarlo
+   * fuera de aqui, tambien manda un mensaje
+   */
+  getBookmarks() { //: Observable<Bookmarks[]> {
+    this.messageService.add('DatosService: fetched datos');
+
+    if (typeof this.bookmarks === 'undefined') {
+      this.bookmarks = BOOKMARKS;
+    }
+
+    return (this.bookmarks);
   }
 
-  saveGrupo(grupo: Grupo) {
-    this.grupo = grupo;
+  /**
+   * Marca el seleccionado
+   * @param bkGrp
+   */
+  setBookmarkSelected(bkGrp: Bookmarks) {
+
+    if (bkGrp === null) {
+      this.bookmarks = BOOKMARKS;
+    } else {
+      this.bookmarks = [BOOKMARKS[bkGrp.id]];
+    }
   }
 
-  emitirGrupo(grupo: Grupo) {
-    this.miEmiter.emit(grupo);
-  }
 }

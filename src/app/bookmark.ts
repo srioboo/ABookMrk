@@ -1,4 +1,4 @@
-export class Bookmark {
+/*export class Bookmark {
     name: string;
     url: string;
-}
+}*/

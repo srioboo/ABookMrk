@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { GRUPOS } from '../mock-entorno';
-import { Grupo } from '../grupo';
+//import { BOOKMARKS } from '../mock-bookmarks';
+import { Bookmarks } from '../bookmarks';
 import { DatosService } from '../datos.service';
 
 @Component({
@@ -11,30 +11,33 @@ import { DatosService } from '../datos.service';
 export class MenuComponent implements OnInit {
 
   /** asingamos constantes */
-  ent = GRUPOS;
+  bookmarks: Bookmarks[];
 
   /** creamos variable de tipo grupo */
-  grupoSelected: Grupo;
+  grupoSelected: Bookmarks;
 
-  constructor(private datosS: DatosService) { }
+  constructor(private datosService: DatosService) { }
 
   ngOnInit() {
     // mostramos el seleccionado, al inicio no hay ninguno
-    this.grupoSelected = this.datosS.getGrupo();
+    this.getBookmarks();
+
+    // seleccionado por defecto
+    this.grupoSelected = null;
+  }
+
+  getBookmarks() {
+    this.bookmarks = this.datosService.getBookmarks();
+    return this.bookmarks;
   }
 
   /** Permite detecar el filtro al ser pulsado */
-  onSelectGrupo(grupo: Grupo): void {
-
-    if (grupo === null) {
-      // console.log('mostrar todos');
-      this.datosS.saveGrupo(null);
+  onSelectBkGrp(bkGrp: Bookmarks): void {
+    if (bkGrp === null) {
+       this.datosService.setBookmarkSelected(bkGrp);
     } else {
-      // console.log('seleccionado: ' + entorno.nombre);
-      this.datosS.saveGrupo(grupo);
+      this.datosService.setBookmarkSelected(bkGrp);
     }
-
-    this.grupoSelected = this.datosS.getGrupo();
-    this.datosS.emitirGrupo(this.grupoSelected);
+    this.grupoSelected = bkGrp;
   }
 }

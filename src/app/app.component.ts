@@ -12,7 +12,7 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     $(document).ready(() => {
-      console.log('test');
+      console.log('jQuery esta funcionando');
       // $('#elementId').css({'background-color': 'yellow', 'font-size': '200%'});
     });
   }
