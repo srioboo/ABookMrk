@@ -15,7 +15,7 @@ export class BookmarksComponent implements OnInit {
   // variable bookmarks
   bookmarks: Bookmarks[];
 
-  constructor(private datosService: DatosService) { }
+  constructor(public datosService: DatosService) { }
 
   ngOnInit() {
       // se obtiene el grupo mediante el servicio de datos
