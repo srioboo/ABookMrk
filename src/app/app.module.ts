@@ -19,7 +19,7 @@ import { HttpClientModule } from '@angular/common/http';
     BookmarksComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     BrowserModule,
     FormsModule,
