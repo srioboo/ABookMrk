@@ -1,1 +1,22 @@
 @import '../styles.scss';
+
+.flex-container {
+    display: flex;
+    flex-direction: row; /* disposición en columna */
+    flex-wrap: nowrap; /* */
+    justify-content: space-start;
+
+    .flex-item {
+        display: inherit;
+        align-items: flex-start; /* alinea por altura */
+        margin: 5px 20px;
+
+       /* &.nav {
+            flex-grow: 0;
+        }
+
+        &.main {
+            flex-grow: 1;
+        }*/
+    }
+}
