@@ -1,5 +1,7 @@
+@import '../../styles.scss';
+
 .selected {
-    background-color: #CFD8DC;;
+    background-color: $gray-400;
 }
 
 .navbar-collapse {
@@ -7,8 +9,8 @@
         position: fixed;
         float: left;
         display: block;
-        background-color: white;
-        border: 1px solid #a8a8a87a;
+        background-color: $white;
+        border: 1px solid $gray-600;
         min-width: 20vw;
         min-height: 100vh;
         padding: 10px;
