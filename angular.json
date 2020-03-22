@@ -30,8 +30,7 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": [
-            ]
+            "scripts": []
           },
           "configurations": {
             "production": {
@@ -91,9 +90,7 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": [
-            
-            ]
+            "scripts": []
           }
         },
         "lint": {
@@ -145,6 +142,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "ABookMrk"
+    }
+  },
+  "defaultProject": "ABookMrk",
+  "cli": {
+    "analytics": "1241a6d0-ef1d-426e-9dea-a17021aab837"
+  }
 }
