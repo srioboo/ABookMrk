@@ -10,13 +10,15 @@ import { BookmarksComponent } from './bookmarks/bookmarks.component';
 
 // importar modulo de httm
 import { HttpClientModule } from '@angular/common/http';
+import { InfoComponent } from './info/info.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent,
     HeaderComponent,
-    BookmarksComponent
+    BookmarksComponent,
+    InfoComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),

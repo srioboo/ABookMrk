@@ -1,0 +1,34 @@
+@import '../../styles.scss';
+
+.alert {
+    display: flex;
+    padding: 0px 10px;
+    justify-content: space-between;
+
+
+    div {
+        align-self: center;
+    }
+
+    .close {
+        border: 0px;
+        background-color: transparent;
+        font-size: 30px;
+        font-weight: bolder;
+        align-self: center;
+        cursor: pointer;
+
+        span {
+            margin: 20px;
+            color: $brown;
+        }
+    }
+
+}
+
+.alert-warning {
+    background-color: $yellow-ligth;
+    border: 1px solid $yellow-semiligth;
+    color: $brown;
+}
+

@@ -1,4 +1,12 @@
-/* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file,
+   and also import other style files */
+
+// Inicialición componentes
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
 
 /* importatando los estilos aqui en lugar de en angular.json nos permite sobreescribir estilos
    que que esten en bootstrap
@@ -42,3 +50,9 @@ $yellow:  #ffc107 !default;
 $green:   #28a745 !default;
 $teal:    #20c997 !default;
 $cyan:    #17a2b8 !default;
+
+$brown:   #856404 !default;
+$yellow-ligth: #fff3cd !default;
+$yellow-semiligth: #ffeeba !default;
+
+$wine: rgb(58, 0, 0) !default;
